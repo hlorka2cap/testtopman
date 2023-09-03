@@ -216,6 +216,7 @@ p {
   padding: 1.5rem;
   font-style: normal;
   color: #1C2A37;
+  border: 0.0625rem solid #DEE2E8;
 }
 
 .itc-select__options {
