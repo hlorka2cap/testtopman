@@ -1,0 +1,234 @@
+@import URL(https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100&display=swap)
+
+*
+    font-family: 'Geometria', sans-serif
+
+html
+    font-size: 16px
+
+body
+    margin: 0
+    background: lightGrey
+    padding: 5rem 1rem
+    text-align: center
+    height: 100vh
+    box-sizing: border-box
+    font-family: 'Geometria', sans-serif
+
+::-webkit-scrollbar
+    display: none
+    width: 0
+    height: 0
+
+p
+    margin: 0
+    margin-block-end: 0
+    margin-block-start: 0
+
+.container
+    max-width: 75rem
+    // width: 100%
+    margin: 0 auto
+    background: white
+    padding: 2rem 1.5rem
+    border-radius: 1rem
+
+.open-button
+    background: red
+    padding: 0.5rem 1rem
+    color: white
+    border: none
+    border-radius: 5rem
+    cursor: pointer
+
+.text
+    text-align: left
+    font-size: 1rem
+    line-height: 1.5rem
+
+.modal
+    position: absolute
+    max-width: 55.9375rem
+    display: none
+    background: white
+    height: max-content
+    padding: 3.125rem 6.3125rem 3.75rem 3.125rem
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    margin: auto
+    z-index: 2
+    border-radius: 0.9375rem
+
+    @media screen and (max-width: 64rem)
+        padding: 2.125rem 1.75rem
+
+    &.active
+        display: block
+        animation: fade-in 0.5s forwards
+
+    &.no-active
+        display: block
+        animation: fade-out 0.5s forwards
+
+.modal-title
+    font-weight: 700
+    font-size: 1.375rem
+    line-height: 1.5rem
+
+.overlay
+    position: absolute
+    display: none
+    height: 100%
+    width: 100%
+    opacity: 0
+    top: 0
+    left: 0
+    transition: opacity 0.3s
+    background: black
+    z-index: 1
+    transition: 0.5s
+
+    &.active
+        opacity: 0.3
+        display: block
+
+.modal__title-line
+    display: flex
+    justify-content: space-between
+    margin-bottom: 1.875rem
+
+@mixin field()
+    width: 100%
+    border-radius: 0.5rem
+    border: 0.0625rem solid #DEE2E8
+    padding: 1.5rem
+    font-size: 1rem
+    font-family: 'Geometria', sans-serif
+    color: #1C2A37
+
+.form
+    display: flex
+    gap: 1.25rem
+    flex-wrap: wrap
+    margin-bottom: 1.875rem
+
+    input
+        @include field()
+
+.close-modal
+    cursor: pointer
+    position: absolute
+    width: 2.5rem
+    height: 2.5rem
+    border: none
+    border-radius: 50%
+    right: 1.25rem
+    top: 1.875rem
+
+    .close-modal-inner
+        position: relative
+
+        &::before, &::after
+            content: ""
+            position: absolute
+            width: 1rem
+            height: 0.0625rem
+            background: #163C68
+            left: 0
+            right: 0
+            margin: auto
+
+        &::before
+            transform: rotate(45deg)
+
+        &::after
+            transform: rotate(-45deg)
+
+.submit-form
+    padding: 0.875rem 2rem
+    border: none
+    border-radius: 0.5rem
+    color: #FFF
+    background: #FF144F
+    font-weight: 700
+    font-size: 0.875rem
+    line-height: 1rem
+    height: 2.75rem
+    margin: auto 0
+
+.modal__footer-line
+    display: flex
+    gap: 1.25rem
+
+    @media screen and (max-width: 64rem)
+        flex-direction: column
+
+.conf
+    padding: 0.375px 0
+    font-size: 0.75rem
+    color: #9CA7B5
+    line-height: 1rem
+    width: 100%
+    max-width: 24.3125rem
+    text-align: left
+
+    a
+        color: #1C2A37
+        text-decoration: none
+
+    @media screen and (max-width: 64rem)
+        max-width: unset
+        text-align: center
+
+.itc-select__toggle
+    padding: 1.5rem
+    font-style: normal
+    color: 1C2A37
+
+.itc-select__options
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    width: 100%
+    max-width: 37.0625rem
+    row-gap: 1rem
+    column-gap: 3.125rem
+
+.itc-select__dropdown
+    padding: 1.5rem
+    top: 100%
+
+.itc-select__option
+    width: 100%
+    max-width: 8.6875rem
+    text-align: left
+    padding-top: 0
+    padding-bottom: 0
+
+    &:hover
+        background: none
+        color: #FF144F
+
+.itc-select__option_selected
+    background: none
+    color: #FF144F
+
+    &::after
+        content: none
+
+@keyframes fade-in
+    from
+        opacity: 0
+
+    to
+        opacity: 1
+
+@keyframes fade-out
+    from
+        opacity: 1
+
+    to
+        opacity: 0
+

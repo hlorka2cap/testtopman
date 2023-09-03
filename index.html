@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/itc-custom-select.css" />
+    <link rel="stylesheet" href="/main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <button class="open-button">Открыть модальное окно</button>
+      <p class="text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum odio
+        sapien, imperdiet sed maximus in, malesuada sit amet lorem. Aliquam
+        lacus orci, viverra ut tortor a, scelerisque interdum sem. Etiam nec
+        dictum urna. Nunc dapibus est id lorem pellentesque, eu finibus erat
+        suscipit. Ut posuere gravida lacus eget rutrum. Mauris tellus nunc,
+        dapibus interdum leo sit amet, rutrum mollis nunc. Praesent non leo
+        arcu. Integer eleifend hendrerit libero. Ut sed pharetra dolor, sit amet
+        maximus augue. Pellentesque laoreet, dolor ac commodo pellentesque,
+        massa magna tincidunt augue, sit amet pretium felis dui at massa. In
+        consequat sapien est, eget venenatis ex dapibus sed. Nullam nunc nibh,
+        viverra at leo ut, fermentum blandit orci. Sed neque lorem, fringilla ut
+        neque ut, porta consectetur nisl. Maecenas iaculis mollis ipsum ac
+        pellentesque. Aliquam ut posuere nibh. Sed gravida dui et fermentum
+        gravida. Quisque pretium venenatis neque a lacinia. Etiam placerat nunc
+        vitae tristique venenatis. In quis felis non lacus volutpat iaculis.
+        Aliquam dictum odio dolor, congue vestibulum massa euismod non. Fusce id
+        nulla condimentum, pretium odio in, gravida orci. Fusce convallis tortor
+        quis nisi euismod, sit amet blandit est auctor. Phasellus imperdiet
+        bibendum tempus. Nam sed turpis lectus. In sit amet risus id ex lacinia
+        venenatis. Aliquam sodales dictum lacinia. Sed sagittis tempus metus eu
+        sollicitudin. Maecenas non felis leo. Suspendisse in bibendum enim.
+        Suspendisse faucibus felis elit, sed tincidunt leo gravida id. Morbi
+        hendrerit tellus diam, ut congue massa egestas eget. Vivamus dictum
+        commodo quam sit amet aliquam. Suspendisse massa tellus, laoreet id
+        justo in, lobortis accumsan dolor. Donec aliquam dignissim purus, quis
+        porttitor purus condimentum in. Quisque pulvinar diam pretium ligula
+        luctus vehicula. Vestibulum aliquet massa dolor, ut hendrerit turpis
+        ornare nec. Nam aliquam, diam nec tincidunt accumsan, velit magna
+        egestas ligula, a lacinia odio nibh sit amet urna. Pellentesque sagittis
+        massa ac orci vehicula luctus. Maecenas velit ex, pretium vel purus
+        vitae, congue aliquam elit. Proin nec massa ac turpis sollicitudin
+        mollis. Aliquam rhoncus augue arcu, eget consectetur ante semper et.
+        Curabitur luctus ligula vel ante tristique venenatis. Morbi facilisis
+        ligula sapien, ac mattis magna aliquet at. Sed mi augue, tincidunt a
+        tincidunt ac, dapibus at velit. Donec vitae felis vel tortor aliquam
+        lacinia. Mauris quam nisi, bibendum at porttitor pretium, aliquam nec
+        sem. Praesent tristique finibus mauris, a pellentesque enim sollicitudin
+        sit amet. Duis a tempor magna. Praesent sed libero ultricies, aliquam
+        ligula eget, scelerisque nulla. Donec tempus tristique sapien eu
+        laoreet. In vehicula tellus id dignissim ultricies. Cras blandit
+        sollicitudin ligula, quis consectetur est consectetur sed. Fusce nec
+        diam vel neque interdum suscipit. Fusce nulla metus, pellentesque quis
+        tristique nec, elementum vitae ipsum. Praesent cursus tincidunt tortor
+        dapibus venenatis. Donec nec mauris nulla. Etiam egestas lectus tempus,
+        accumsan mauris ut, luctus mi. Sed eget cursus neque. Morbi in lectus
+        nulla. Sed ac mi dui. Maecenas venenatis eros a aliquet venenatis.
+        Mauris ut tincidunt eros, nec vestibulum nulla. Curabitur eu dignissim
+        lorem, et dapibus nulla.
+      </p>
+      <div class="modal">
+        <div class="modal__title-line">
+          <p class="modal-title">Оставить заявку</p>
+          <button class="close-modal">
+            <div class="close-modal-inner"></div>
+          </button>
+        </div>
+        <form onSubmit="submitForm" class="form">
+          <input type="text" placeholder="ФИО" />
+          <input type="text" id="phone" placeholder="+7 (___) ___ - __ - __" />
+          <div class="itc-select" id="select-1">
+            <!-- Кнопка для открытия выпадающего списка -->
+            <button
+              type="button"
+              class="itc-select__toggle"
+              name="car"
+              value=""
+              data-select="toggle"
+              data-index="-1"
+            >
+              Выберите из списка
+            </button>
+            <!-- Выпадающий список -->
+            <div class="itc-select__dropdown">
+              <ul class="itc-select__options">
+                <li
+                  class="itc-select__option"
+                  data-select="option"
+                  data-value="Краснодар"
+                  data-index="0"
+                >
+                  Краснодар
+                </li>
+                <li
+                  class="itc-select__option"
+                  data-select="option"
+                  data-value="Ростов-на-Дону"
+                  data-index="1"
+                >
+                  Ростов-на-Дону
+                </li>
+                <li
+                  class="itc-select__option"
+                  data-select="option"
+                  data-value="Анапа"
+                  data-index="2"
+                >
+                  Анапа
+                </li>
+                <li
+                  class="itc-select__option"
+                  data-select="option"
+                  data-value="Москва"
+                  data-index="3"
+                >
+                  Москва
+                </li>
+                <li
+                  class="itc-select__option"
+                  data-select="option"
+                  data-value="Воронеж"
+                  data-index="4"
+                >
+                  Воронеж
+                </li>
+                <li
+                  class="itc-select__option"
+                  data-select="option"
+                  data-value="Белгород"
+                  data-index="5"
+                >
+                  Белгород
+                </li>
+                <li
+                  class="itc-select__option"
+                  data-select="option"
+                  data-value="Санкт-Петербург"
+                  data-index="6"
+                >
+                Санкт-Петербург
+                </li>
+                <li
+                  class="itc-select__option"
+                  data-select="option"
+                  data-value="Сочи"
+                  data-index="7"
+                >
+                  Сочи
+                </li>
+                <li
+                  class="itc-select__option"
+                  data-select="option"
+                  data-value="Геленджик"
+                  data-index="8"
+                >
+                  Геленджик
+                </li>
+              </ul>
+            </div>
+          </div>
+        </form>
+        <div class="modal__footer-line">
+          <button class="submit-form" id="submit" type="submit">Оставить заявку</button>
+          <p class="conf">
+            Нажимая кнопку, я даю согласие на обработку персональных данных, в
+            соответствии с <a href="#">Политикой</a>, и соглашаюсь с <a href="#">Правилами</a>
+          </p>
+        </div>
+      </div>
+      <div class="overlay"></div>
+    </div>
+    <script src="/itc-custom-select.js"></script>
+    <script>
+      const select1 = new ItcCustomSelect("#select-1");
+    </script>
+    <script src="/script.js"></script>
+  </body>
+</html>
