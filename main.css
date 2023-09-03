@@ -269,5 +269,22 @@ p {
     opacity: 0;
   }
 }
+.form .input-message {
+  height: 7.5rem;
+  resize: none;
+  color: #1C2A37;
+  font-weight: 400;
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 0.0625rem solid #DEE2E8;
+  padding: 1.5rem;
+  font-size: 1rem;
+  font-family: "Geometria", sans-serif;
+  color: #1C2A37;
+}
+.form .input-message:focus {
+  outline: none;
+  background: #E2E2E2;
+}
 
 /*# sourceMappingURL=main.css.map */
