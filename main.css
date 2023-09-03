@@ -44,6 +44,10 @@ p {
   border: none;
   border-radius: 5rem;
   cursor: pointer;
+  transition: all 0.5s;
+}
+.open-button:hover {
+  background: #FF4E3F;
 }
 
 .text {
@@ -126,6 +130,10 @@ p {
   font-family: "Geometria", sans-serif;
   color: #1C2A37;
 }
+.form input:focus {
+  outline: none;
+  background: #E2E2E2;
+}
 
 .close-modal {
   cursor: pointer;
@@ -168,6 +176,10 @@ p {
   line-height: 1rem;
   height: 2.75rem;
   margin: auto 0;
+  transition: all 0.5s;
+}
+.submit-form:hover {
+  background: #FF4E3F;
 }
 
 .modal__footer-line {
@@ -203,7 +215,7 @@ p {
 .itc-select__toggle {
   padding: 1.5rem;
   font-style: normal;
-  color: 1C2A37;
+  color: #1C2A37;
 }
 
 .itc-select__options {
